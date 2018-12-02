@@ -2,6 +2,7 @@ package pe.cmacica.labs.labs02.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import pe.cmacica.labs.labs02.service.ClienteService;
 
@@ -9,16 +10,20 @@ import pe.cmacica.labs.labs02.service.ClienteService;
 public class ClienteRepositoryImpl implements ClienteRepository {
 
     @Autowired
-    @Qualifier("clienteProxyV2")
+    //@Qualifier("clienteProxyV2")
     private ClienteProxy clienteProxy;
+
+    @Value("${labs02.nombre}")
+    private String nombre;
 
     @Override
     public String getNombre(int id) {
-        return "JC";
+        return nombre;
     }
+
     @Override
     public String getNumeroCuenta(int id) {
-        return "123456";
+        return "asdasdasdsd";
     }
 
     @Override

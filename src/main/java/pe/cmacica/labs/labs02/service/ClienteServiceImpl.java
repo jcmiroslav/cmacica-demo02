@@ -12,7 +12,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public String getNombres(int id) {
-        return "Juan Carlos Perez";
+        return clienteRepository.getNombre(2);
     }
 
     @Override

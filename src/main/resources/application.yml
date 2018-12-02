@@ -1,0 +1,20 @@
+server:
+  port: 9060
+
+logging.level:
+  root: INFO
+  pe:
+    cmacica:
+      labs:
+        labs02: DEBUG
+
+labs02:
+  igv: 18
+  nombre: lab0222
+  url: http://wwww.google.com
+  cuenta: 123-123123123123123-123213
+  mail:
+    server: mail.com
+    port: 3033
+    user: admin
+    password: password
